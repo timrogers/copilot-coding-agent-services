@@ -34,7 +34,7 @@ jobs:
         image: europe-west3-docker.pkg.dev/meshstack-infra/dockerhub/mailhog/mailhog
         credentials:
           username: _json_key
-          password: "${{ secrets.GCR_REGISTRY_PUSHER }}"
+          password: ${{ secrets.GCR_REGISTRY_PUSHER }}
         ports:
           - 1025:1025
           - 8025:8025
@@ -43,7 +43,7 @@ jobs:
         image: europe-west3-docker.pkg.dev/meshstack-infra/meshstack-container/keycloak-ci:23
         credentials:
           username: _json_key
-          password: "${{ secrets.GCR_REGISTRY_PUSHER }}"
+          password: ${{ secrets.GCR_REGISTRY_PUSHER }}
         ports:
           - 5050:8080
           - 8443:8443
@@ -53,7 +53,7 @@ jobs:
         image: europe-west3-docker.pkg.dev/meshstack-infra/meshstack-container/ravendb-ci
         credentials:
           username: _json_key
-          password: "${{ secrets.GCR_REGISTRY_PUSHER }}"
+          password: ${{ secrets.GCR_REGISTRY_PUSHER }}
         ports:
           - 4040:4040
           - 38888:38888
@@ -62,7 +62,7 @@ jobs:
         image: europe-west3-docker.pkg.dev/meshstack-infra/dockerhub/rabbitmq:3.11.18-alpine
         credentials:
           username: _json_key
-          password: "${{ secrets.GCR_REGISTRY_PUSHER }}"
+          password: ${{ secrets.GCR_REGISTRY_PUSHER }}
         ports:
           - 5672:5672
           - 15672:15672
@@ -72,7 +72,7 @@ jobs:
         image: europe-west3-docker.pkg.dev/meshstack-infra/meshstack-container/mariadb-ci
         credentials:
           username: _json_key
-          password: "${{ secrets.GCR_REGISTRY_PUSHER }}"
+          password: ${{ secrets.GCR_REGISTRY_PUSHER }}
         ports:
           - 3306:3306
 
@@ -110,7 +110,7 @@ jobs:
         image: europe-west3-docker.pkg.dev/meshstack-infra/meshstack-container/osb-build
         credentials:
           username: _json_key
-          password: "${{ secrets.GCR_REGISTRY_PUSHER }}"
+          password: ${{ secrets.GCR_REGISTRY_PUSHER }}
         ports:
         - 8075:8075
     
